@@ -1,0 +1,318 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500&family=Allura&display=swap');
+
+:root {
+  --cream: #fbf6ef;
+  --beige: #ead9c7;
+  --brown: #775744;
+  --dark: #35271f;
+  --muted: #907968;
+  --white: #fffaf4;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--dark);
+  font-family: 'DM Sans', sans-serif;
+  line-height: 1.7;
+}
+
+a { color: inherit; text-decoration: none; }
+
+button { font: inherit; cursor: pointer; }
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px 6%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fbf6eff2;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #ead9c780;
+}
+
+.logo {
+  font-family: 'Allura', cursive;
+  font-size: 28px;
+  color: var(--brown);
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  font-size: 12px;
+  color: var(--brown);
+}
+
+.nav-links a:hover { color: #bd8c76; }
+
+.hero {
+  min-height: 86vh;
+  display: grid;
+  place-items: center;
+  padding: 45px 7%;
+  text-align: center;
+  background: linear-gradient(135deg, #f0dfcf, #fffaf4 55%, #e5cdb8);
+}
+
+.hero-content { max-width: 750px; }
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 10px;
+  color: var(--muted);
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: clamp(48px, 9vw, 88px);
+  margin: 20px 0;
+}
+
+h1 em {
+  font-family: 'Allura', cursive;
+  color: #a47b62;
+  font-size: 1.15em;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: clamp(34px, 6vw, 52px);
+  margin-bottom: 15px;
+}
+
+p { margin-bottom: 15px; }
+
+.lead {
+  max-width: 550px;
+  margin: 0 auto 28px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border: 1px solid var(--brown);
+  border-radius: 30px;
+  background: var(--brown);
+  color: white;
+  transition: .25s;
+}
+
+.btn:hover {
+  background: #4e392c;
+  transform: translateY(-2px);
+}
+
+.btn-light {
+  background: transparent;
+  color: var(--brown);
+}
+
+.section {
+  padding: 75px 6%;
+  text-align: center;
+}
+
+.section-alt { background: #f0e3d7; }
+
+.section-head {
+  max-width: 650px;
+  margin: 0 auto 35px;
+}
+
+.photo-hero {
+  width: min(100%, 720px);
+  max-height: 490px;
+  object-fit: cover;
+  margin: 30px auto;
+  border: 10px solid var(--white);
+  box-shadow: 0 15px 40px #62452d20;
+  border-radius: 4px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.polaroid {
+  background: var(--white);
+  padding: 10px 10px 15px;
+  border: 1px solid #ebdfd2;
+  box-shadow: 0 8px 25px #65452b10;
+  transition: .3s;
+}
+
+.polaroid:hover {
+  transform: translateY(-6px) rotate(0deg) !important;
+}
+
+.polaroid img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  background: var(--beige);
+}
+
+.polaroid figcaption {
+  font-family: 'Allura', cursive;
+  color: var(--brown);
+  font-size: 25px;
+  padding-top: 9px;
+}
+
+.paper {
+  max-width: 750px;
+  margin: auto;
+  padding: clamp(25px, 6vw, 55px);
+  text-align: left;
+  background: var(--white);
+  border: 1px solid #e7d4c1;
+  box-shadow: 0 12px 35px #65452b0c;
+}
+
+.paper p { margin-bottom: 20px; }
+
+.signature {
+  text-align: right;
+  font-family: 'Allura', cursive;
+  font-size: 30px;
+  color: var(--brown);
+}
+
+.music-card, .surprise-card {
+  max-width: 560px;
+  margin: auto;
+  padding: 30px;
+  background: var(--white);
+  border: 1px solid #ead9c7;
+  border-radius: 12px;
+}
+
+.music-card audio {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.gift {
+  font-size: 90px;
+  margin: 15px 0 25px;
+}
+
+.hidden { display: none; }
+.hidden.show { display: block; animation: fadeIn .7s ease; }
+
+.footer {
+  padding: 55px 20px;
+  text-align: center;
+  background: var(--beige);
+}
+
+.script {
+  font-family: 'Allura', cursive;
+  font-size: 35px;
+  color: var(--brown);
+}
+
+.heart { color: #b77d72; }
+
+#hearts {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 50;
+}
+
+.floating-heart {
+  position: absolute;
+  bottom: -30px;
+  animation: rise 4s linear forwards;
+  color: #b88678;
+}
+
+@keyframes rise {
+  to {
+    transform: translateY(-110vh) rotate(30deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 700px) {
+  nav { align-items: flex-start; flex-direction: column; }
+  .nav-links { gap: 13px; }
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .polaroid img { height: 210px; }
+  .section { padding: 55px 16px; }
+}
+
+@media (max-width: 380px) {
+  .gallery { grid-template-columns: 1fr; }
+  .polaroid img { height: 300px; }
+}
+
+.birthday-date {
+  margin: 25px auto;
+  padding: 20px;
+  max-width: 380px;
+  background: rgba(255, 250, 244, 0.8);
+  border: 1px solid #ead9c7;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px #65452b10;
+}
+
+.birthday-date .date-icon {
+  color: #b88678;
+  font-size: 28px;
+}
+
+.birthday-date p {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #907968;
+  margin: 8px 0;
+}
+
+.birthday-date h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px;
+  color: #775744;
+  margin: 8px 0;
+}
+
+.birthday-date .date-year {
+  font-size: 12px;
+  color: #907968;
+}

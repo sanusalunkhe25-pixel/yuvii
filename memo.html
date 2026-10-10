@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Little Notes for Yuvii ♡</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.notes {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  max-width:850px;
+  margin:35px auto;
+}
+.note {
+  background:#fffaf4;
+  border:1px solid #ead9c7;
+  padding:25px 15px;
+  border-radius:12px;
+  box-shadow:0 7px 20px #6b493012;
+  transition:.3s;
+}
+.note:hover { transform:translateY(-5px) rotate(-1deg); }
+.note button {
+  border:0;
+  background:transparent;
+  color:#775744;
+  width:100%;
+}
+.envelope { font-size:43px; }
+.note h3 { margin:10px 0; }
+.message {
+  display:none;
+  margin-top:15px;
+  color:#806b5c;
+  font-size:14px;
+}
+.message.show { display:block; animation:fadeIn .5s ease; }
+@media(max-width:500px) {
+  .notes { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="index.html">For Yuvii ♡</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="memories.html">His Photos</a>
+    <a href="letter.html">Letter</a>
+    <a href="memo.html">Love Notes</a>
+    <a href="song.html">Our Song</a>
+    <a href="surprise.html">Surprise</a>
+  </div>
+</nav>
+
+<header class="hero" style="min-height:45vh">
+  <div class="hero-content">
+    <p class="eyebrow">A few little things I want you to know</p>
+    <h1>Little Love <em>Notes ♡</em></h1>
+    <p class="lead">
+      Six tiny reminders for my favourite person.
+      Open whichever note your heart chooses. 💌
+    </p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="notes">
+
+    <div class="note">
+      <button onclick="toggleNote(1)">
+        <div class="envelope">💌</div>
+        <h3>When you miss me</h3>
+        <span>Tap to open ♡</span>
+      </button>
+      <p class="message" id="note1">
+        Imagine me smiling at you right now.
+        Sending you the biggest virtual hug.
+        Distance can't erase a beautiful memory. 🤍
+      </p>
+    </div>
+
+    <div class="note">
+      <button onclick="toggleNote(2)">
+        <div class="envelope">🧸</div>
+        <h3>When you're tired</h3>
+        <span>Tap to open ♡</span>
+      </button>
+      <p class="message" id="note2">
+        Take a breath, my love. You don't have to
+        figure everything out today. Rest a little.
+        I'm always wishing good things for you. ♡
+      </p>
+    </div>
+
+    <div class="note">
+      <button onclick="toggleNote(3)">
+        <div class="envelope">🌷</div>
+        <h3>A little reminder</h3>
+        <span>Tap to open ♡</span>
+      </button>
+      <p class="message" id="note3">
+        You are more than your achievements.
+        I'm proud of the person you're becoming.
+        Keep believing in yourself, Yuvii. 🤍
+      </p>
+    </div>
+
+    <div class="note">
+      <button onclick="toggleNote(4)">
+        <div class="envelope">🥹</div>
+        <h3>Something I love</h3>
+        <span>Tap to open ♡</span>
+      </button>
+      <p class="message" id="note4">
+        It's the little things — your smile,
+        our conversations, and the memories
+        that become special just because they're ours. ♡
+      </p>
+    </div>
+
+    <div class="note">
+      <button onclick="toggleNote(5)">
+        <div class="envelope">🫶🏻</div>
+        <h3>A wish for us</h3>
+        <span>Tap to open ♡</span>
+      </button>
+      <p class="message" id="note5">
+        May we always choose honesty, understanding,
+        respect and effort. May we grow together
+        without forgetting to grow as individuals too. 🤍
+      </p>
+    </div>
+
+    <div class="note">
+      <button onclick="toggleNote(6)">
+        <div class="envelope">🎂</div>
+        <h3>Birthday special</h3>
+        <span>Tap to open ♡</span>
+      </button>
+      <p class="message" id="note6">
+        Happy Birthday, Yuvii! I hope this year brings
+        you peace, success, good health and so many
+        reasons to smile. You deserve beautiful things. 🎂
+      </p>
+    </div>
+
+  </div>
+
+  <p class="script">A little note, with a lot of love. ♡</p>
+  <a class="btn" href="surprise.html">Open your surprise →</a>
+</section>
+
+<footer class="footer">
+  <p class="script">If words could hug you, these notes would. ♡</p>
+</footer>
+
+<script>
+function toggleNote(number) {
+  const note = document.getElementById("note" + number);
+  note.classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
